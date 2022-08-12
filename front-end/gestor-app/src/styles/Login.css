@@ -1,0 +1,75 @@
+:root {
+    --white: #FFFFFF;
+    --black: #222831;
+    --very-light-pink: #C7C7C7;
+    --text-input-field: #F7F7F7;
+    --hospital-green: #ACD9B2;
+    --color-font: #C5C5C5;
+    --sm: 14px;
+    --md: 16px;
+    --lg: 18px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.background-cut {
+    background-image: url('../assets/images/pexels-pixabay-256395.jpg');
+    background-size: cover;
+}
+
+.row {
+    margin-bottom: 0px;
+}
+
+.form-container {   
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    background-color: var(--black);
+    height: 100vh;
+    width: 320px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.login {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: var(--black);
+}
+
+.title {
+    color: #EEEEEE;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: start;
+}
+
+.form {
+    margin-left: 12px;
+    margin-right: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-form {
+    color: var(--very-light-pink);
+}
+
+.label {
+    margin-top: 12px;
+    font-size: var(--sm);
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.btn-flat{
+    color: var(--color-font);
+    width: 100%;
+    margin-top: 24px;
+}

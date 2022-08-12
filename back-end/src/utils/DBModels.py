@@ -1,0 +1,72 @@
+from app import db
+import uuid
+
+class Users(db.Model):
+    user_id = db.Column(db.String(150), primary_key=True, nullable=False)
+    d_name = db.Column(db.String(250), nullable=False)
+    school_cct = db.Column(db.String(150), nullable=False)
+    email = db.Column(db.String, nullable=False)
+    password = db.Column(db.String(16), nullable=False)
+    roll = db.Column(db.Integer, nullable=False, default=0)
+
+    def __repr__(self):
+        return f"User('{self.user_id}', '{self.d_name}', '{self.school_cct}', '{self.password}')"
+
+    def __init__(self, data: dict):
+        self.user_id = uuid.uuid4()
+        self.d_name = data['d_name']
+        self.school_cct = data['school_cct']
+        self.email = data['email']
+        self.password = data['password']
+        self.roll = data['roll']
+
+
+class Schools(db.Model):
+    school_id = db.Column(db.String(150), primary_key=True)
+    school_name = db.Column(db.String(250), nullable=False)
+    school_cct = db.Column(db.String(150), nullable=False)
+    group_number = db.Column(db.Integer, nullable=False)
+    director_id = db.Column(db.String(150), db.ForeignKey('directors.director_id'), nullable=False)
+
+    def __repr__(self):
+        return f"School('{self.school_id}', '{self.school_name}', '{self.school_cct}', '{self.group_number}')"
+
+    def __init__(self, data: dict):
+        self.school_id = uuid.uuid4()
+        self.school_name = data['name']
+        self.school_cct = data['cct']
+        self.group_number = data['groups']
+
+
+class Groups(db.Model):
+    group_id = db.Column(db.String(150), primary_key=True)
+    student_num = db.Column(db.Integer, nullable=False)
+    school_id = db.Column(db.String(150), db.ForeignKey('schools.school_id'), nullable=False)
+
+    def __repr__(self):
+        return f"Group('{self.group_id}', '{self.student_num}', '{self.school_id}')"
+
+    def __init__(self, student_num, school_id):
+        self.group_id = uuid.uuid4()
+        self.student_num = student_num
+        self.school_id = school_id        
+
+
+class Students(db.Model):
+    student_id = db.Column(db.String(150), primary_key=True)
+    student_name = db.Column(db.String(250), nullable=False)
+    school_id = db.Column(db.String(150), db.ForeignKey('schools.school_id'), nullable=False)
+    teacher_id = db.Column(db.String(150), db.ForeignKey('teachers.teacher_id'), nullable=False)
+    group_id = db.Column(db.String(150), db.ForeignKey('groups.group_id'), nullable=False)
+    degree = db.Column(db.Integer, default=1, nullable=False)
+
+    def __repr__(self):
+        return f"Student('{self.student_id}', '{self.student_name}', '{self.school_id}', '{self.teacher_id}', '{self.group_id}', '{self.degree}')"
+
+    def __init__(self, student_name, school_id, teacher_id, group_id, degree):
+        self.student_id = uuid.uuid4()
+        self.student_name = student_name
+        self.school_id = school_id
+        self.teacher_id = teacher_id
+        self.group_id = group_id
+        self.degree = degree

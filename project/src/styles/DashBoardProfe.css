@@ -1,0 +1,134 @@
+:root {
+    --white: #FFFFFF;
+    --black: #222831;
+    --lightest-black: #393E46;
+    --very-light-pink: #C7C7C7;
+    --text-input-field: #F7F7F7;
+    --hospital-green: #ACD9B2;
+    --color-font: #C5C5C5;
+    --sm: 14px;
+    --md: 16px;
+    --lg: 18px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.row {
+    margin-bottom: 0px;
+}
+
+.dash-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: top;
+    background-color: var(--black);
+    height: 100vh;
+    width: 320px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.dash-view {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    background-color: var(--lightest-black);
+    height: 100vh;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.inst-header {
+    padding: inherit;
+    margin-top: 42px;
+    margin-bottom: 42px;
+}
+
+.inst-header-text {
+    margin: 0px;
+    font-family: Roboto, 'sans-serif';
+    color: var(--color-font);
+}
+
+.header-text-dash {
+    padding: inherit;
+    font-size: 10px;
+    font-family: Roboto, 'sans-serif';
+    color: var(--color-font);
+}
+
+.inst-icon {
+    font-size: 2rem;
+    color: var(--color-font);
+    margin-right: 0px;
+}
+
+.prof-text-container {
+    color: var(--color-font);
+    font-family: Roboto, 'sans-serif';
+    padding: inherit;
+}
+
+.prof-info {
+    padding: inherit;
+}
+
+.group-info {
+    padding: inherit;
+    margin-bottom: 42px;
+}
+
+.export-container {
+    display: flex;
+    color: var(--color-font);
+    font-family: Roboto, 'sans-serif';
+    padding: inherit;
+    margin-top: 42px;
+    margin-bottom: 42px;
+    height: 50px;
+    align-items: center;
+}
+
+#myChart {
+    background-color: white;
+}
+
+.table-container {
+    color: var(--color-font);
+    background-color: var(--black);
+    overflow-y: scroll;
+    height: 500px;
+}
+
+@media screen and (max-width: 1000px) {
+   .inst-header-text {
+        display: none;
+   }
+
+   .header-text-dash {
+        display: none;
+   }
+
+   .inst-icon {
+        font-size: 3rem;
+   }
+
+   .export-text {
+        display: none;
+   }
+
+   .export-icon {
+        font-size: 3rem;
+   }
+}
+
+@media screen and (max-width: 600px) {
+    .dash-controls {
+        display: none;
+    }
+}

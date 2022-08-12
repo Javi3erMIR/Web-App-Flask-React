@@ -1,0 +1,23 @@
+:root {
+    --white: #FFFFFF;
+    --black: #222831;
+    --lightest-black: #393E46;
+    --very-light-pink: #C7C7C7;
+    --text-input-field: #F7F7F7;
+    --hospital-green: #ACD9B2;
+    --color-font: #C5C5C5;
+    --sm: 14px;
+    --md: 16px;
+    --lg: 18px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--lightest-black);
+    background-image: none;
+}
+
+.custom-navbar {
+    background-color: #222831;
+}
