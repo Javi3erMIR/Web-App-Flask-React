@@ -1,0 +1,42 @@
+.title {
+    color: #EEEEEE;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: start;
+}
+
+.form-excel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    background-color: var(--black);
+    height: 100vh;
+    width: 320px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.form {
+    margin-left: 12px;
+    margin-right: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-form {
+    color: var(--very-light-pink);
+}
+
+.label {
+    margin-top: 12px;
+    font-size: var(--sm);
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.btn-flat{
+    color: var(--color-font);
+    width: 100%;
+    margin-top: 24px;
+}

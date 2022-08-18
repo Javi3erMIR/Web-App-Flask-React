@@ -5,6 +5,8 @@ import Home from "../pages/Home";
 import Register from "../pages/Register";
 import Login from "../pages/Login";
 import DashBoard from "../pages/DashBoard";
+import RegisterSchool from "../pages/RegisterSchool";
+import CreateExcelFormat from "../pages/CreateExcelFormat";
 import NotFound from "../pages/NotFound";
 import AppContext from "../context/AppContext";
 import useInitialState from "../hooks/useInitialState";
@@ -21,6 +23,8 @@ const App = () => {
             <Route exact path="/register" element={<Register />} />
             <Route exact path="/login" element={<Login />} />
             <Route exact path="/dashboard/:user_id" element={<DashBoard />} />
+            <Route exact path="/get-excel" element={<CreateExcelFormat />} />
+            <Route exact path="/registrar-escuela" element={<RegisterSchool />} />
             <Route exact path="*" element={<NotFound />} />
           </Routes>
         </Layout>

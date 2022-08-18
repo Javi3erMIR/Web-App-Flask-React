@@ -1,3 +1,4 @@
 /front-end/gestor-app/node_modules
-/*/__pycache__
+/back-end/*/*/__pycache__
+/back-end/*/__pycache__
 /*/venv

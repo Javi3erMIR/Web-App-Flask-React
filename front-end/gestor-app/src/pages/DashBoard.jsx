@@ -31,6 +31,7 @@ const DashBoard = () =>{
             if(res.data.isSchoolRegister) setServer(true);
             if(res.data.roll) setIsProfessor(true);
             setUserName(res.data.userName);
+            if(res.data.schoolName) setSchoolName(res.data.schoolName);
         })
         .catch(error => {
             console.log(error);
@@ -44,12 +45,17 @@ const DashBoard = () =>{
 
     return (
       <div className="row">
-        {!state ?
-            <div>
-                <DashControls isSchoolResgiter={server} isProfessor={isProfessor} userName={userName}/>
-                <DashView isSchoolResgiter={server}/>
-            </div>
-        : null}
+        {!state ? (
+          <div>
+            <DashControls
+              isSchoolResgiter={server}
+              isProfessor={isProfessor}
+              userName={userName}
+              schoolName={schoolName}
+            />
+            <DashView isSchoolResgiter={server} />
+          </div>
+        ) : null}
       </div>
     );
 }

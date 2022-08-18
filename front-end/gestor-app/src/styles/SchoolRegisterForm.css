@@ -1,0 +1,23 @@
+.form {
+    margin-left: 12px;
+    margin-right: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-form {
+    color: var(--very-light-pink);
+}
+
+.label {
+    margin-top: 12px;
+    font-size: var(--sm);
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.btn-flat{
+    color: var(--color-font);
+    width: 100%;
+    margin-top: 24px;
+}
